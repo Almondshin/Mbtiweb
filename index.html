@@ -28,8 +28,8 @@
         <button id="B" type="button" class="btn btn-danger mt-5">Primary</button>
     </article>
     <article class="result">
-        <img id="img" class="rounded-circle mt-5" src="./images/Designer _Outline.png" alt="animal">
-        <h2 id="animal" class="text-center mt-5">MBTI</h2>
+        <img id="img" class="rounded-circle mt-5" src="./images/Designer _Outline.png" alt="mbti">
+        <h2 id="mbti" class="text-center mt-5">MBTI</h2>
         <h3 id="explain" class="text-center mt-5">설명</h3>
         <button id="show" class="text-center mt-5" width="20%">로그인</button>
 
@@ -92,23 +92,23 @@
         }
         var result = {
             "ISTJ": {
-                "animal": "ISTJ", "explain": "ISTJ 설명",
+                "mbti": "ISTJ", "explain": "ISTJ 설명",
                 "img": "./images/Designer _Outline.png", "Login": "show"
             },
             "ISFJ": {
-                "animal": "ISFJ", "explain": "ISFJ 설명",
+                "mbti": "ISFJ", "explain": "ISFJ 설명",
                 "img": "./images/Lunch break_Outline.png", "Login": "show"
             },
             "INFJ": {
-                "animal": "INFJ", "explain": "INFJ 설명",
+                "mbti": "INFJ", "explain": "INFJ 설명",
                 "img": "./images/Lunch break_Outline.png", "Login": "show"
             },
             "ENFP": {
-                "animal": "ENFP", "explain": "ENFP 설명",
+                "mbti": "ENFP", "explain": "ENFP 설명",
                 "img": "./images/Easter bunny_Flatline.png", "Login": "show"
             },
             "ENTJ": {
-                "animal": "ENTJ", "explain": "ENTJ 설명",
+                "mbti": "ENTJ", "explain": "ENTJ 설명",
                 "img": "./images/Fortnite_Outline.png", "Login": "show"
             },
 
@@ -147,7 +147,7 @@
                 //     mbti += "E";
                 // } 
                 $("#img").attr("src", result[mbti]["img"]);
-                $("#animal").html(result[mbti]["animal"]);
+                $("#mbti").html(result[mbti]["mbti"]);
                 $("#explain").html(result[mbti]["explain"]);
 
 
