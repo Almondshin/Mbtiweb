@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProject</title>
+    <link rel="shortcut" href="/images/Logodesign3.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <nav>
+        <div class="phone">
+            <span>Call +123456789</span>
+        </div>
+        <div class="navigation">
+            <a href="#" class="logo">
+                <img src="/images/Logodesign3.png">
+            </a>
+            <ul class="menu">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" onclick="a()">Notice</a></li>
+                <li><a href="#" class="goinfoc">Information</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#" class="gombtic">Test</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="right-menu">
+                <a href="#" class="search">
+                    <i class="s-search">검색</i>
+                </a>
+                <a href="#" class="user">
+                    <i class="u-user">로그인</i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="search-bar">
+        <div class="search-input">
+            <input id="tip" type="text" placeholder="TIP! 검색어 입력 후 엔터">
+            <a href="#" class="search-cancel">
+                <i class="search-cancel-text">닫기</i>
+            </a>
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="login-form">
+            <a href="#" class="form-cancel">
+                <i>닫기</i>
+            </a>
+            <strong>로그인</strong>
+            <form onsubmit="return loginCheck()">
+                <input type="email" placeholder="아이디(이메일)" name="email" id="loginEmail">
+                <input type="password" placeholder="비밀번호" name="password" id="loginPwd">
+                <input type="submit" value="로그인">
+            </form>
+            <div class="form-btns">
+                <a href="#" class="forget">비밀번호 찾기</a>
+                <a href="#" class="sign-up-btn">B-MBTI 가입하기</a>
+            </div>
+        </div>
+
+        <div class="sign-up-form">
+            <a href="#" class="form-cancel">
+                <i>닫기</i>
+            </a>
+            <strong>가입하기</strong>
+            <p></p>
+            <form name="signUpForm" onsubmit="return signUpCheck()">
+                <input type="email" placeholder="아이디(이메일)" name="email" id="signEmail">
+                <input type="text" placeholder="이름" name="fullname" id="signName">
+                <input type="adress" placeholder="주소" name="adress" id="signAdress">
+                <input type="phonenumber" placeholder="휴대폰 번호" name="phonenumber" id="signNumber">
+                <input type="password" placeholder="비밀번호" name="password" id="signPassword">
+                <input type="submit" value="가입하기">
+            </form>
+            <div class="form-btns">
+                <a href="#" class="already-account">이미 계정이 있으신가요?</a>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li class="background-image-box">
+            <div class="main-box test-slider-img-1">
+                <div class="info-hide">
+                    <div class="info" id="contents2"></div>
+                </div>
+            </div>
+            <div class="main-box test-slider-img-2">
+                <div class="popmbti">
+                    <p id="contents"></p>
+                </div>
+            </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- <div class="feature-headline">
+        <h2>추천 카테고리</h2>
+    </div>
+
+    <ul class="bread-align">
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread01.jpg">
+                </a>
+            </div>
+            <span>빵 01</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread02.jpg">
+                </a>
+            </div>
+            <span>빵 02</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread03.jpg">
+                </a>
+            </div>
+            <span>빵 03</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread04.jpg">
+                </a>
+            </div>
+            <span>빵 04</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread05.jpg">
+                </a>
+            </div>
+            <span>빵 05</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread06.jpg">
+                </a>
+            </div>
+            <span>빵 06</span>
+        </li>
+        <li class="feature-text">
+            <div class="feature-box">
+                <a href="#">
+                    <img src="img/bread07.jpg">
+                </a>
+            </div>
+            <span>빵 07</span>
+        </li>
+    </ul>
+ -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+
+        function loginCheck(){
+            var loginEmail = document.getElementById("loginEmail");
+            var loginPwd = document.getElementById("loginPwd");
+
+            if (loginEmail.value == '') {
+                alert("아이디(이메일)를 입력하세요");
+                loginEmail.focus();
+                return false;
+            }; 
+            if (loginPwd.value == '') {
+                alert("비밀번호를 입력하세요");
+                loginPwd.focus();
+                return false;
+            };
+
+        }
+        function signUpCheck() {
+
+            var signEmail = document.getElementById("signEmail");
+            var signName = document.getElementById("signName");
+            var signAdress = document.getElementById("signAdress");
+            var signNumber = document.getElementById("signNumber");
+            var signPassword = document.getElementById("signPassword");
+
+            if (signEmail.value == '') {
+                alert("이메일을 입력하세요");
+                signEmail.focus();
+                return false;
+            };
+            if (signName.value == '') {
+                alert("이름을 입력하세요");
+                signName.focus();
+                return false;
+            };
+            if (signAdress.value == '') {
+                alert("주소를 입력하세요");
+                signAdress.focus();
+                return false;
+            };
+            if (signNumber.value == '') {
+                alert("휴대폰 번호를 입력하세요");
+                signNumber.focus();
+                return false;
+            };
+            if (signPwd.value == '') {
+                alert("비밀번호를 입력하세요");
+                signPwd.focus();
+                return false;
+            };
+        };
+
+
+        function a() {
+            var count = document.getElementById("");
+            count++;
+            console.log(count)
+        }
+        /*         if (count > 2) {
+                    $('#contents2').load("list.html");
+                } */
+
+
+
+        //홈 새로고침 << 깜빡임 >>
+
+        $('#home').click(function () {
+            location.reload();
+        });
+
+
+        $('#contents').load("mbti.html");
+        $('#contents2').load("list.html");
+
+
+        /* 페이지 새로고침 */
+
+        $(document).on('click', '.load-close', function () {
+            $("#refresh").load(window.location.href + "#refresh");
+        });
+
+        $(document).on('click', '.load-close2', function () {
+            $("#refresh2").load(window.location.href + "#refresh2");
+        });
+
+        $(document).on('click', '.goinfoc', function () {
+            $('.info').addClass('info-active')
+        });
+        $(document).on('click', '.load-close', function () {
+            $('.info').removeClass('info-active')
+        });
+
+        /* test click - mbti.html */
+        $(document).on('click', '.gombtic', function () {
+            $('.popmbti').addClass('popmbti-active')
+        });
+        $(document).on('click', '.load-close2', function () {
+            $('.popmbti').removeClass('popmbti-active')
+        });
+
+
+        $(document).on('click', '.search', function () {
+            $('.search-bar').addClass('search-bar-active')
+        });
+        $(document).on('click', '.search-cancel', function () {
+            $('.search-bar').removeClass('search-bar-active')
+        });
+        $(document).on('click', '.user,.already-account', function () {
+            $('.form').addClass('login-active').removeClass('sign-up-active')
+        });
+        $(document).on('click', '.sign-up-btn', function () {
+            $('.form').addClass('sign-up-active').removeClass('login-active')
+        });
+        $(document).on('click', '.form-cancel', function () {
+            $('.form').removeClass('login-active').removeClass('sign-up-active')
+        });
+
+
+
+    </script>
+</body>
+
+</html>

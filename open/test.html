@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Register Validate</title>
+  <script language="javascript">
+    function validate() {
+       var userID = document.getElementById("userID");  //ID
+       var userPass = document.getElementById("userPass");  //PASSWORD
+       var userPassC = document.getElementById("userPassC");  //PASSWORD CHECKING
+       var userEmail = document.getElementById("userEmail");  //EMAIL
+       var name = document.getElementById("name");  //NAME
+       var personalN = document.getElementById("personalN"); //PERSONAL NUMBER
+ 
+       var arrayPN = new Array();//주민 담는 배열
+ 
+ 
+       //ID 유효성검사
+       if(userID.value==''){
+          alert("Input ID");
+          return false;
+       }
+
+       //PASSWORD 유효성검사
+       if(userPass.value==''){
+          alert("Input Password");
+          return false;
+       }
+ 
+       //EMAIL 유효성검사
+       if(userEmail.value==''){
+        alert("Input Email");
+        return false;
+       }
+
+        //name 유효성검사
+        if(name.value==''){
+          alert("Input Name");
+        }
+        //PERSONAL NUMBER 유효성 검사
+        if(personalN.value==''){
+          alert("Input Personal No");
+          return false;
+        }
+
+  }
+</script>
+</head>
+ 
+<body>
+  <H3>회원가입</H3>
+  <form action=mailto:2winkite@naver.com method="post" enctype="text/plain" onsubmit="return validate()">
+    <table align="center" border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <th bgcolor=#F261AA colspan="3" bgcolor="#F261AA" align="center">회원
+          기본 정보</th>
+      </tr>
+ 
+      <tr>
+        <th bgcolor=#F261AA align=center>아이디:</th>
+        <td><input type="text" name="userID" id="userID" size="37">4~12자의
+          영문 대소만자와 숫자로만 입력</td>
+ 
+      </tr>
+ 
+      <tr>
+        <th bgcolor=#F261AA align=center>비밀번호:</th>
+        <td><input type="password" name="userPass" id="userPass" size="37">4~12자의
+          영문 대소만자와 숫자로만 입력</td>
+ 
+      </tr>
+ 
+      <tr>
+        <th bgcolor=#F261AA align=center>비민번호 확인:</th>
+        <td><input type="password" name="userPassC" id="userPassC" size="37"></td>
+ 
+      </tr>
+ 
+      <tr>
+        <th bgcolor=#F261AA align=center>메일주소:</th>
+        <td><input type="text" name="userEmail" id="userEmail" size="37">예)userID@bit.com</td>
+ 
+      </tr>
+ 
+      <tr>
+        <th bgcolor=#F261AA align=center>이름:</th>
+        <td><input type="text" name="name" id="name" size="37"></td>
+ 
+      </tr>
+      
+    </table>
+    <div align="center">
+      <br>
+      <input type="submit" value="회원 가입">
+      <input type="reset" value="다시 입력">
+    </div>
+  </form>
+</body>
+ 
+</html>
+

@@ -1,0 +1,39 @@
+body{
+    font-family: 'Jua', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+.result{
+    display: none;
+}
+.load-close2{
+    position: absolute;
+    font-size: 1.2rem;
+    color: rgba(71, 71, 71, 0.8);
+    transform: translateX(50%);
+    width: 900px;
+}
+
+#img{
+    background-color: whitesmoke;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+#show{
+    position: relative;
+    background-color: lightgray;
+    transform: translateX(150%);
+    width: 25%;
+    font-weight: bold;
+    border-radius: 5px;
+}

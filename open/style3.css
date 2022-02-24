@@ -1,0 +1,29 @@
+h2{
+  font-weight: 700;
+  font-size: 2rem;  
+}
+table{
+    border: 1px solid black;
+}
+tr{
+  border: 1px solid blue;
+}
+td{
+  border: 1px solid salmon;
+}
+.btn{
+  height: 70%;
+}
+.tablelist-hover {
+  background-color : rgba(161, 161, 161, 0.8);
+}
+.list{
+  width: 700px;
+}
+.load-close{
+  text-align: right;
+  position: absolute;
+  font-size: 1.2rem;
+  color: rgba(71, 71, 71, 0.8);
+  width: 700px;
+}
